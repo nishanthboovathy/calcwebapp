@@ -21,7 +21,7 @@ node {
    
    stage('Package & Deploy') {
    bat("mvn package")
-	 bat 'curl --upload-file target/calcwebapp.war "http://deployer:deployer@localhost:8081/manager/text/deploy?path=/webcalcdemo&update=true"'
+	 bat 'curl --upload-file target/calcwebapp.war "http://deployer:deployer@http://0bc42d86.ngrok.io:8080/manager/text/deploy?path=/webcalcdemo&update=true"'
    }
    
 
